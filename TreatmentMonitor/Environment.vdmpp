@@ -1,0 +1,23 @@
+class Environment is subclass of Global
+
+types
+    public inline = Patient * Treatment;
+
+instance variables
+    public io : IO := new IO();
+    inlines  : seq of inline  := [];
+
+operations
+    public Environment: String ==> Environment
+    Environment(fname) == 
+    def 
+        mk_(-,input) = io.freadval[seq of inline](fname)
+    in
+        inlines := input;
+
+
+    public Run : () ==> ()
+    Run() ==
+        is not yet specified;
+
+end Environment

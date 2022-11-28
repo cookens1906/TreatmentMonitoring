@@ -1,0 +1,26 @@
+class Monitor is subclass of Global
+
+types
+
+public reading: seq of LabWork`Reading;
+inv m == len m.reading = 5
+
+functions
+
+Improving: Monitor -> bool
+Improving(m) == m.reading(1) > m.reading(5);
+
+Unstable: Monitor -> bool
+Unstable(m) == m.reading(1) < m.reading(5);
+
+values
+-- values to be used for test purposes
+mon1 = [350,365,421,390,380];
+mon2 = [350,390,320,395,330];
+mon3 = [345,341,433,321,314];
+mon4 = [450,465,421,590,480];
+mon5 = [350,390,420,395,430];
+mon6 = [345,341,433,321,314];
+
+
+end Monitor

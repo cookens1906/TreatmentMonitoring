@@ -1,0 +1,4 @@
+class LabWork
+types
+public Reading = int
+end LabWork

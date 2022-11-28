@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Lens config: Launch Patient`GetPatientId",
+            "type": "vdm",
+            "request": "launch",
+            "noDebug": true,
+            "defaultName": "Patient",
+            "command": "p new Patient().GetPatientId()"
+        }
+    ]
+}

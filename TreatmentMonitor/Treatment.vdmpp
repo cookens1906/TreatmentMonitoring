@@ -1,0 +1,48 @@
+class Treatment is subclass of Global
+
+instance variables
+
+ condition: Condition;
+ meds: set of Medication;
+ dosage: int;
+
+operations
+
+    ----- GET/SET operations ----
+
+    pure GetTreatmentCondition: () ==> Condition
+    GetTreatmentCondition()==
+    return condition;
+
+    pure GetTreatmentMedList: () ==> set of Medication
+    GetTreatmentMedList()==
+    return meds;
+
+    pure GetTreatmentDosage: () ==> int
+    GetTreatmentDosage()==
+    return dosage;
+
+    public set_TreatmentCondition: Condition ==> ()
+    set_TreatmentCondition(cond)==
+    condition := cond;
+
+    public set_TreatmentMedList: set of Medication ==> ()
+    set_TreatmentMedList(medset)==
+    meds := medset;
+
+    public adjust_TreatmentDosage: int ==> ()
+    adjust_TreatmentDosage(multiplier)==
+    dosage := dosage * multiplier; 
+
+    -------
+
+    --Class constructor
+    public Treatment: Condition * set of Medication * int ==> Treatment
+    Treatment(cond,medlist,dos) ==
+    (
+        condition := cond;
+        meds := medlist;
+        dosage := dos;
+    );
+
+end Treatment

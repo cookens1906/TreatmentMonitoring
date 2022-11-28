@@ -1,0 +1,19 @@
+class Global
+
+values
+ ---
+
+types
+
+public Time = nat;
+
+public ID = nat
+inv id == id >=0;
+
+
+public Medication = <Medication1> | <Medication2> | <Medication3> | <Medication4>;
+public Condition = <KidneyCancer> | <LungCancer> | <Melanoma> | <Leukemia>;
+
+public String = seq of char;
+
+end Global

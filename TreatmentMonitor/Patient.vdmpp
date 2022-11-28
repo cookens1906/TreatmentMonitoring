@@ -1,0 +1,35 @@
+class Patient is subclass of Global
+
+instance variables
+
+ patientID : ID;
+ condition: Condition;
+ allergies: set of Medication;
+
+operations
+    
+    ----- GET/SET operations ----
+
+    pure GetPatientId: () ==> ID
+    GetPatientId()==
+    return patientID;
+
+    pure GetPatientCondition: () ==> Condition
+    GetPatientCondition()==
+    return condition;
+
+    pure GetPatientAllergies: () ==> set of Medication
+    GetPatientAllergies() ==
+    return allergies;
+
+    ----
+
+    public Patient: ID * Condition * set of Medication ==> Patient
+    Patient(id, cond, medlist)==
+    (
+        patientID := id;
+        condition := cond;
+        allergies := medlist;
+    );
+    
+end Patient
